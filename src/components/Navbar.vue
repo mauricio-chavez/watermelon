@@ -9,15 +9,31 @@
       </vs-navbar-title>
     </div>
 
-    <vs-navbar-item index="0">
-      <router-link to="/login">Iniciar sesión</router-link>
+    <template v-if="isAuthenticated">
+      <vs-navbar-item>
+        <a>Añadir Nota</a>
+      </vs-navbar-item>
+      <vs-navbar-item>
+        <a>Ver Perfil</a>
+      </vs-navbar-item>
+      <vs-navbar-item>
+        <a @click="logout">Cerrar Sesión</a>
+      </vs-navbar-item>
+    </template>
+
+    <vs-navbar-item v-else>
+      <a @click="login">Iniciar sesión con Google</a>
     </vs-navbar-item>
   </vs-navbar>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  computed: mapGetters(["isAuthenticated", "user"]),
+  methods: mapActions(["login", "logout"])
 };
 </script>
 
@@ -38,5 +54,15 @@ export default {
 
 .brand span:hover {
   color: #333;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  cursor: pointer;
 }
 </style>

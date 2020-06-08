@@ -6,13 +6,18 @@
 import { mapGetters } from "vuex";
 export default {
   name: "App",
-  computed: mapGetters(["isLoading"]),
+  computed: mapGetters(["isLoading", "error"]),
   watch: {
-    isLoading: function(loading) {
+    isLoading(loading) {
       if (loading) {
         this.$vs.loading();
       } else {
         this.$vs.loading.close();
+      }
+    },
+    error(currentError) {
+      if (currentError) {
+        this.$vs.notify({ title: "Ups...", text: currentError, color: "danger" });
       }
     }
   }

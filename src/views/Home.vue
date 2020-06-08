@@ -1,6 +1,5 @@
 <template>
   <layout>
-    <h1>Inicio</h1>
   </layout>
 </template>
 

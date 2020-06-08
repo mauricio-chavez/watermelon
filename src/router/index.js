@@ -9,10 +9,10 @@ const routes = [
     path: '/',
     component: Home,
   },
-  {
-    path: '/login',
-    component: () => import('../views/Login.vue'),
-  },
+  // {
+  //   path: '/login',
+  //   component: () => import('../views/Login.vue'),
+  // },
 ];
 
 export default new VueRouter({ mode: 'history', routes });

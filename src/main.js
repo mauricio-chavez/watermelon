@@ -8,6 +8,7 @@ import App from './components/App.vue';
 import 'firebase/auth';
 import 'firebase/firestore';
 import 'vuesax/dist/vuesax.css';
+import 'material-icons/iconfont/material-icons.css';
 
 Vue.config.productionTip = false;
 
