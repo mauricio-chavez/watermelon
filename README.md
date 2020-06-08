@@ -1,4 +1,4 @@
-# "atermelon [![Netlify Status](https://api.netlify.com/api/v1/badges/8b336cd9-5475-4592-9cdf-1c273c7fdd10/deploy-status)](https://app.netlify.com/sites/fervent-colden-f4d6d9/deploys)
+# Watermelon [![Netlify Status](https://api.netlify.com/api/v1/badges/8b336cd9-5475-4592-9cdf-1c273c7fdd10/deploy-status)](https://app.netlify.com/sites/fervent-colden-f4d6d9/deploys)
 
 ## Project setup
 ```
