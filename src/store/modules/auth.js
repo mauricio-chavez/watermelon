@@ -1,4 +1,5 @@
 import api from '../../api/firebase';
+import router from '../../router';
 
 const state = {
   user: null,
@@ -33,6 +34,7 @@ const actions = {
     try {
       await api.logout();
       localStorage.removeItem('firebase_token');
+      router.push('/');
     } catch (error) {
       commit('setError', error.message);
     } finally {
@@ -42,7 +44,7 @@ const actions = {
   changeAuthState({ commit }, user) {
     commit('setUser', user);
     if (!user) {
-      commit("setToken", null)
+      commit('setToken', null);
     }
   },
   setLoading({ commit }, loadingState) {

@@ -5,7 +5,6 @@ async function login() {
   provider.addScope('https://www.googleapis.com/auth/userinfo.email');
   try {
     const result = await firebase.auth().signInWithPopup(provider);
-    console.log(result);
     return {
       token: result.credential.accessToken,
       user: result.user,

@@ -11,10 +11,7 @@
 
     <template v-if="isAuthenticated">
       <vs-navbar-item>
-        <a>Añadir Nota</a>
-      </vs-navbar-item>
-      <vs-navbar-item>
-        <a>Ver Perfil</a>
+        <router-link to="/create">Añadir Nota</router-link>
       </vs-navbar-item>
       <vs-navbar-item>
         <a @click="logout">Cerrar Sesión</a>
